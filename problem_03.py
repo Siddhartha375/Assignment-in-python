@@ -1,7 +1,8 @@
-num=int(input("Enter the number:"))
-for i in range(2,num):
-    if(num%i==0):
-        print(" not Prime number")
-        break
-else:
-    print("prime")
+s={18,"18",18.1}
+print(s)
+a={18,"18",18.0}
+print(a)
+print(len(a))
+print(type(a))
+c={}
+print(type(c))
