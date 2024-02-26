@@ -1,6 +1,5 @@
-#5!=1x2x3x4x5
-n=int(input("Enter the number:"))
-fact=1
-for i in range(1,n+1):
-    fact=fact*i
-    print(f"factorial of {n} is={fact}")
+#s={3,4,"S",[3,4]} # throws error because we can not delecear a list inside a set.
+#print(s)
+ 
+a={3,4,2,(3,2)} # can be print but we can not change the tuple
+print(a) 
