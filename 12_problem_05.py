@@ -1,26 +1,24 @@
-class vector:
-    def __init__(self,vec):
-        self.vec=vec
+class Train:
+    def __init__(self,name,price,seats):
+        self.name=name
+        self.price=price
+        self.seats=seats
 
-    def __str__(self):
-        str1=""
-        index=0
-        for i in self.vec:
-            str1 +=f"{i}a{index} +"
-            index+=1 
-        return str1 [:-1] 
-    def __add__(self,vec2):
-        newList=[]
-        for i in range(len(self.vec)):
-            newList.append(self.vec[i] + vec2.vec[i])
-        return vector(newList)
-    
-    def __mul__(self,vec2):
-        sum=0
-        for i in range (len(self.vec)):
-            sum+=self.vec[i] * vec2.vec[i]
-        return sum
-v1=vector([6,9,8,9])
-v2=vector([1,2,3,4])
-print(v1+v2)  
-print(v1*v2)      
+    def getInfo(self):
+        print("*************")
+        print(f"The name of the train is={self.name}")
+        print(f"The price of the ticket is Rs {self.price}")
+        print(f"The available seats in the train is {self.seats}")
+        print("*****************")
+    def bookTicket(self):
+        if(self.seats>0):
+            print(f"Your ticket is booked!\n and your seat number is {self.seats}")
+            self.seats=self.seats-1 
+        else:
+            print("Sorry! No tickit are availabale at the time \n Thank you!")
+
+Intercity=Train("Intercity Express:23134",300,1)
+Intercity.getInfo()
+Intercity.bookTicket()
+Intercity.bookTicket()
+Intercity.getInfo()

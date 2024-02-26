@@ -1,26 +1,17 @@
-# Rules:(a+bi)(c+di)=(ac-bd)+(ad+bc)i
-class Complex:
-    def __init__(self,r,i):
-        self.real=r
-        self.imaginary=i
+class Calculator:
+    def __init__(self, num):
+        self.number=num
 
-    def __add__(self,c):
-        return Complex(self.real+c.real, self.imaginary+c.imaginary)
-    
-    def __mul__(self,c):
-        #mulReal=(ac-db) Rules (a=self.real c=c.real & d=self.imaginary *c.real)
-        mulReal=(self.real*c.real - self.imaginary*c.imaginary)
-        #mulImg=(ad+bc)
-        mulImg=(self.real*c.imaginary + self.imaginary *c.real)
-        return Complex(mulReal,mulImg)
-    
-    def __str__(self):
-        if self.imaginary<0:
-            return (f"{self.real} - {-self.imaginary}")
-        else:
-            return f"{self.real} +{self.imaginary}i"
+    def square(self):
+        print(f"The square of the {self.number} is {self.number**2}")
+    def cube(self):
+        print(f"The cube of the {self.number} is {self.number**3}")
 
-c1=Complex(-3,2)
-c2=Complex(1,-37)
-print(c1+c2)
-print(c1*c2)
+    @staticmethod
+    def greet():
+        print("Welcome to our new page") 
+
+a=Calculator(4)
+a.square()
+a.cube()
+a.greet()

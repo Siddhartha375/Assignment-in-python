@@ -1,20 +1,12 @@
-class c2dvec:
-    def __init__(self,i,j) :     #This is 2d vector
-        self.icap=i
-        self.jcap=j
+class programmer:
+    company="Microsoft"
+    def __init__(self, name, product) :
+        self.name=name
+        self.product=product
 
-    def __str__(self) -> str:
-        return (f"{self.icap}i + {self.jcap}j")    
-    
-class c3dvec(c2dvec):
-    def __init__(self,i,j,k) -> None:# This is 3d vector
-        super().__init__(i,j)
-        self.kcap=k
-    
-    def __str__(self) -> str:
-        return (f"{self.icap}i + {self.jcap}j +{self.kcap}k")
-    
-vector2=c2dvec(3,4)
-vector3=c3dvec(3,4,2)
-print(vector2)
-print(vector3)       
+    def getInfo(self):
+            print(f"The name of the programmer is {self.name} and the product is {self.product}")
+harry=programmer("Harry","Skype")       
+alka=programmer("Alka","Github")
+harry.getInfo()
+alka.getInfo()

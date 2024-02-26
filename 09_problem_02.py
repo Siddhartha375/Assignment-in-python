@@ -1,14 +1,18 @@
-class Animals:
-    #animalType='Mammal'
-    print("This is animal class")
-class Pets:
-    color='White'
-    print("I am Pets")
+class Calculator:
+    def __init__(self, num):
+        self.number=num
 
-class Dog:
-    @staticmethod
-    def bark():
-        print("Bow.....Bow")        
+    def square(self):
+        print(f"The square of the {self.number} is {self.number**2}")
+    def cube(self):
+        print(f"The cube of the {self.number} is {self.number**3}")    
 
-d=Dog()
-d.bark()       
+    def squareRoot(self):
+        print(f"The square root of {self.number } is {self.number**0.5}")
+
+
+a=Calculator(4)
+a.square()    
+a.cube()
+a.squareRoot()
+         
